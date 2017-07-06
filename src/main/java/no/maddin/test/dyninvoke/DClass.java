@@ -13,6 +13,6 @@ public class DClass {
      * This constructor should not have been called since there is a constructor with fewer parameters.
      */
     public DClass(BClass p1, CClass p2) {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException("This constructor should not have been called since there is a constructor with fewer parameters");
     }
 }

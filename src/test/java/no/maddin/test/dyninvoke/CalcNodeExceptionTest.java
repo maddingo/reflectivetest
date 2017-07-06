@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import javax.lang.model.type.PrimitiveType;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.StandardLocation;
@@ -96,7 +95,7 @@ public class CalcNodeExceptionTest {
      * Get all the files from the given package.
      * Copied from https://stackoverflow.com/a/32828953/555366
      */
-    public static <T> List<Class<?>> testClasses(final String pack, final Class<T> baseClass) throws Exception {
+    private static <T> List<Class<?>> testClasses(final String pack, final Class<T> baseClass) throws Exception {
         final StandardJavaFileManager fileManager = ToolProvider.getSystemJavaCompiler().getStandardFileManager(null, null, null);
         return StreamSupport.stream(fileManager.list(
             StandardLocation.CLASS_PATH,
